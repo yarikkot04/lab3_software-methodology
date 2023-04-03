@@ -1,5 +1,7 @@
 FROM python:alpine
 
+RUN apk add --no-cache musl-dev g++ gcc lapack-dev
+
 WORKDIR /opt/application
 
 COPY ./requirements/backend.in /opt/application/
